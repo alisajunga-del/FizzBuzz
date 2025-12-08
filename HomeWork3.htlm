@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz Interactive Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> FizzBuzz Interactive Generator</h1>
+            <p>Generate divs with customizable FizzBuzz logic</p>
+        </header>
 
+        <div class="controls">
+            <div class="control-group">
+                <label for="startValue">Starting Value</label>
+                <input type="number" id="startValue" value="1" min="1">
+            </div>
+
+            <div class="control-group">
+                <label for="endValue">Ending Value</label>
+                <input type="number" id="endValue" value="100" min="1">
+            </div>
+
+            <div class="control-group">
+                <label for="fizzValue">Fizz Value (divisor)</label>
+                <input type="number" id="fizzValue" value="3" min="1">
+            </div>
+
+            <div class="control-group">
+                <label for="buzzValue">Buzz Value (divisor)</label>
+                <input type="number" id="buzzValue" value="5" min="1">
+            </div>
+
+            <div class="button-group">
+                <button id="generateBtn" class="btn btn-primary">Generate Divs</button>
+                <button id="clearBtn" class="btn btn-secondary">Clear All</button>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-box fizzbuzz"></span>
+                <span>FizzBuzz (divisible by both)</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-box fizz"></span>
+                <span>Fizz (divisible by Fizz value only)</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-box buzz"></span>
+                <span>Buzz (divisible by Buzz value only)</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-box number"></span>
+                <span>Number (not divisible by either)</span>
+            </div>
+        </div>
+
+        <main id="mainContainer">
+            <!-- Divs will be generated here -->
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
