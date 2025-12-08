@@ -1,0 +1,13 @@
+{
+ "name": "fizzbuzz",
+ "version": "1.0.0",
+ "description": "",
+ "main": "fizzbuzz.js",
+ "scripts": {
+    "dev": "vite --mode dev",
+    "build": "vite build",
+    "lint": "echo `linted`"
+     },
+"keywords": [],
+"author": ""
+}
