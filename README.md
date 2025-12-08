@@ -1,1 +1,1 @@
-# Calude-Monet
+# Fizzbuzz generator
