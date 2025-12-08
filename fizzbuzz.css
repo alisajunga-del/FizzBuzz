@@ -1,0 +1,253 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    color: #F1F5F9;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #9333EA, #3B82F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #94A3B8;
+}
+
+.controls {
+    background: #1E293B;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #CBD5E1;
+}
+
+.control-group input {
+    padding: 12px 16px;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    background: #0F172A;
+    color: #F1F5F9;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.control-group input:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    grid-column: 1 / -1;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    flex: 1;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3B82F6, #9333EA);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+    background: #334155;
+    color: #F1F5F9;
+}
+
+.btn-secondary:hover {
+    background: #475569;
+    transform: translateY(-2px);
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #1E293B;
+    border-radius: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.legend-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+    padding: 20px;
+    background: #1E293B;
+    border-radius: 16px;
+    min-height: 200px;
+}
+
+/* Responsive grid layouts */
+@media (min-width: 640px) {
+    main {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
+
+/* Div styles for generated elements */
+.fizzbuzz {
+    background: linear-gradient(135deg, #9333EA, #7C3AED);
+    color: white;
+}
+
+.fizz {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    color: white;
+}
+
+.buzz {
+    background: linear-gradient(135deg, #10B981, #059669);
+    color: white;
+}
+
+.number {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+}
+
+.generated-div {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+.generated-div:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 639px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .controls {
+        padding: 20px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .legend {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
